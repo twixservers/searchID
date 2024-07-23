@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twix ID</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- SEARCH TWIX ID -->
+    
+    <section id="searchIdSection">
+        <br><br><br>
+        <h1>Get User Information</h1>
+    <form>
+        <label for="uidInput">Enter UID:</label>
+        <input type="text" id="uidInput" name="uid"><br><br>
+    </form>
+    <button id="getInfoBtn">Get Info</button>
+
+    <div id="userInfoContainer">
+        <br><br>
+        <strong>User Info:</strong>
+        <br><hr><br>
+        <ul id="userInfoList"></ul>
+        <br><hr>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/short-unique-id@5.2.0/dist/short-unique-id.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
+<script src="firebase.js"></script>
+<script>
+    (function(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const uidInput = urlParams.get('uid')
+    document.getElementById('uidInput').value = uidInput;
+    document.getElementById('getInfoBtn').click();
+  })();
+</script>
+
+</body>
+</html>

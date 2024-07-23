@@ -1,0 +1,56 @@
+.roboto-mono-font {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 557;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    text-align: center;
+    background-color: #c1c1c1;
+}
+
+#mainID {
+    margin: auto;
+    height: 2.125in;
+    width: 3.375in;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 100px;
+    position: static;
+    /* border: 2px solid red; */
+}
+
+#innerDiv {
+    position: absolute;
+    margin: 0.1in;
+    align-self: center;
+    height: 1.925in;
+    width: 3.175in;
+}
+
+h2, #idInfo {
+    text-align: left;
+}
+
+#idInfo {
+    margin-left: 0.1in;
+}
+
+
+
+
+
+@media print {
+    .noPrint{
+      display:none;
+    }
+  }
